@@ -35,6 +35,7 @@ source=(
   0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
   0002-Default-to-maximum-amount-of-ASLR-bits.patch
   0003-skip-simpledrm-if-nvidia-drm.modeset\=1-is.patch
+  0004-amdgpu-force-enable-fan-control.patch
   config  # the main kernel config file
 )
 validpgpkeys=(
@@ -42,18 +43,20 @@ validpgpkeys=(
   647F28654894E3BD457199BE38DBBDC86092693E  # Greg Kroah-Hartman
 )
 # https://www.kernel.org/pub/linux/kernel/v6.x/sha256sums.asc
+
 sha256sums=('234621e146dacce2241049555d550e4f7a6bde67ccd7ef232d47ac8145425526'
             'SKIP'
             '3cf389ced2b40e6457421cb27892bf126b73032fbf1de895ecc37b13d981a17c'
             '423b2c6fbc8d6df79997550bef1b1e4f6f402b668007d150013623a83a12b49e'
             '596f8e0aef1df72a84685e8f2b8a9dde7e33b513de555fae6069ba652cbd00c1'
-            '36b168ebfffab295bf146b0e5c67fce9c36ed2e594d66304ebfe18253d1bbc2e')
+            'SKIP')
 b2sums=('33f3934b1ac44df48cfe48b7bb6b0dbfea8c66769a337560c5d855abbb337d64f7d645de9c795f1616bf82834574b68ca4c3fe59a2117c894ca18c2f66808d54'
         'SKIP'
         'b2e1f3544470a0ded336a8d9097b879060530d795a9b60ef5d617d16c165f3ca27424529a7c464d249ab72abcaf48d65d66d96508a7b49622ab404739ae0a918'
         '01f1a8249983b1a52437843ce3566242b3ed1df03fcab98ec092982be9a4dc947ab0f932a6bc9ac84f85248dca479ebe193a6032cfd2b574dc6f5ca31a0190c5'
         '410dc8911051905c5c01b47890eeff817fc180434372864cfa9ee0d77e0ff43571b9fcc3c193d562c4dcd49511edf7c6c01dde12dd0778845d1868dc435531ea'
-        '181674a17bfbbddb473bb5a3915134193e51243e23bf7b1b48b0c4f147e981233f54d27032afed3a5dcb9e74aeea5ae30cb1f19886faec64c743bd73da7c4136')
+        'SKIP')
+
 export KBUILD_BUILD_HOST=archlinux
 export KBUILD_BUILD_USER=$pkgbase
 export KBUILD_BUILD_TIMESTAMP="$(date -Ru${SOURCE_DATE_EPOCH:+d @$SOURCE_DATE_EPOCH})"
