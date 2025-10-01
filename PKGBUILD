@@ -35,7 +35,6 @@ source=(
   0001-ZEN-Add-sysctl-and-CONFIG-to-disallow-unprivileged-C.patch
   0002-Default-to-maximum-amount-of-ASLR-bits.patch
   0003-skip-simpledrm-if-nvidia-drm.modeset\=1-is.patch
-  0004-amdgpu-force-enable-fan-control.patch
   config  # the main kernel config file
 )
 validpgpkeys=(
